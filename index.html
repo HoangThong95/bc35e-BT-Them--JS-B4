@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 class="mt-5">
+        TÍNH NGÀY THÁNG NĂM
+      </h1>
+      <form>
+        <div class="form-row">
+          <div class="col-2">
+            <input type="number" class="form-control" placeholder="Ngày" id="ngay">
+          </div>
+          <div class="col-2">
+            <input type="number" class="form-control" placeholder="Tháng" id="thang">
+          </div>
+          <div class="col-2">
+            <input type="number" class="form-control" placeholder="Năm" id="nam">
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-primary" onclick="tinhHomQua();return false">
+              Hôm Qua
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-primary" onclick="tinhNgayMai();return false;">
+              Ngày mai
+            </button>
+          </div>
+          <div class="col-12" id="result__5">
+          </div>
+        </div>
+      </form>
+      <h1 class="mt-5">
+        ĐẾM NGÀY
+      </h1>
+      <form onsubmit="demNgay();return false;">
+        <div class="form-row">
+          <div class="col-2">
+            <input type="number" class="form-control" placeholder="Tháng" id="demThang">
+          </div>
+          <div class="col-2">
+            <input type="number" class="form-control" placeholder="Năm" id="demNam">
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-primary">
+              Submit
+            </button>
+          </div>
+          <div class="col-12" id="result__6">
+          </div>
+        </div>
+      </form>
+      <h1 class="mt-5">
+        ĐỌC SỐ
+      </h1> 
+      <form onsubmit="docSo();return false;">
+        <div class="form-row">
+          <div class="col-3">
+            <input type="number" class="form-control" placeholder="Nhập số có 3 chữ số" id="nhapSo">
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-primary">
+              Submit
+            </button>
+          </div>
+          <div class="col-12" id="result__7">
+          </div>
+        </div>
+      </form>
+      <h1 class="mt-5">
+        TÌM SINH VIÊN XA TRƯỜNG NHẤT
+      </h1>
+      <form onsubmit="timSvXaTruong();return false;">
+        <div class="form-row">
+          <label class="col-1 col-form-label">
+            Sinh viên 1
+          </label>
+          <div class="col-auto">
+            <input type="text" class="form-control" placeholder="Tên" id="sv1__name">
+          </div>
+          <div class="col-auto">
+            <input type="number" class="form-control" placeholder="Tọa độ X" id="sv1__x">
+          </div>
+          <div class="col-auto">
+            <input type="number" class="form-control" placeholder="Tọa độ Y" id="sv1__y">
+          </div>
+        </div>
+        <div class="form-row mt-2">
+          <label class="col-1 col-form-label">
+            Sinh viên 2
+          </label>
+          <div class="col-auto">
+            <input type="text" class="form-control" placeholder="Tên" id="sv2__name">
+          </div>
+          <div class="col-auto">
+            <input type="number" class="form-control" placeholder="Tọa độ X" id="sv2__x">
+          </div>
+          <div class="col-auto">
+            <input type="number" class="form-control" placeholder="Tọa độ Y" id="sv2__y">
+          </div>
+        </div>
+        <div class="form-row mt-2">
+          <label class="col-1 col-form-label">
+            Sinh viên 3
+          </label>
+          <div class="col-auto">
+            <input type="text" class="form-control" placeholder="Tên" id="sv3__name">
+          </div>
+          <div class="col-auto">
+            <input type="number" class="form-control" placeholder="Tọa độ X" id="sv3__x">
+          </div>
+          <div class="col-auto">
+            <input type="number" class="form-control" placeholder="Tọa độ Y" id="sv3__y">
+          </div>
+        </div>
+        <div class="form-row mt-2">
+          <label class="col-1 col-form-label">
+            Trường
+          </label>
+          <div class="col-auto">
+            <input type="number" class="form-control" placeholder="Tọa độ X" id="truong__x">
+          </div>
+          <div class="col-auto">
+            <input type="number" class="form-control" placeholder="Tọa độ Y" id="truong__y">
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary">
+              Submit
+            </button>
+          </div>
+          <div class="col-12" id="result__8"></div>
+        </div>
+        
+      </form>
+
+    </div>
+
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
